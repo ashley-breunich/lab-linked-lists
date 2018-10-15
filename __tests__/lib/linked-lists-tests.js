@@ -2,50 +2,60 @@
 
 let LL = require('../../lib/linked-lists.js');
 
-describe('Linked List', () => {
+describe('Linked List Constructor', () => {
 
-  it('constructor()', ()=> {
+  it('constructor() will be null', ()=> {
     let list = new LL();
     expect(list.head).toBeNull();
   });
 
-  it('append()', ()=> {
+});
+
+describe('Append', () => {
+
+  it('Append will keep the same head value when new values are appended.', ()=> {
     let list = new LL();
-    let initialValue = 'John';
-    list.append(initialValue);
-    expect(list.head.value).toEqual(initialValue);
+   
+    list.append(1);  
+    list.append(2);
+    list.append(3);
 
-    let newValue = 'Cathy';
-    list.append(newValue);
-    expect(list.head.value).toEqual(initialValue);
-
-    let anotherOne = 'Mary';
-    list.append(anotherOne);
-
-    // console.log(list);
-    
+    expect(list.head.value).toBe(1);
+    expect(list.head.next.value).toBe(2);
+    expect(list.head.next.next.value).toBe(3);
+      
   });
 
-  it('prepend()', ()=> {
+  it('if there is no head, the head will become the node value entered', ()=> {
+    let list = new LL();
+    list.prepend('1');
+    expect(list.head.value).toBe('1');
+        
+  });
+
+});
+
+describe('Prepend', () => {
+
+  it('prepend() will change the head to the most recently prepended value', ()=> {
     let list = new LL();
     list.append('John');
     list.append('Cathy');
     list.append('Mary');
     list.prepend('Joey');
-    expect(list.head.value).toEqual('Joey');
-
+    list.prepend('Alyssa');
+    expect(list.head.value).toBe('Alyssa');
+    expect(list.head.next.value).toBe('Joey');
+    expect(list.head.next.next.value).toBe('John');
     console.log(list);
-    
+        
   });
 
-  it('reverse()', ()=> {
+  it('if there is no head, the head will become the node value entered', ()=> {
     let list = new LL();
-    list.append('1');
-    list.append('2');
-    list.append('3');
-    list.append('4');
-    list.append('5');
-    // console.log(list);
+    list.prepend('Joey');
+    expect(list.head.value).toBe('Joey');
+        
   });
 
 });
