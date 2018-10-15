@@ -24,6 +24,17 @@
   * organize your tests into appropriate describe/it blocks for test output readability
 
 ####  Documentation
+In order to use this program and get it running on your own computer, you will need to go to the [GitHub link](hhttps://github.com/ashley-breunich/lab-linked-lists), fork the repository, and then clone it down to your machine.
+
+After that, you will want to make sure you install eslint and lint. You can do that by typing 'npm i eslint' and 'npm i lint' into the command line.
+
+You can run the tests by installing JEST. You can do so by typing 'npm i jest' in your command line after you have run npm init and set up your package.json. Once you have that set up run 'jest --watchAll' in your command line to run the tests. This will allow you to see what tests are passing/failing every time you make a save. 
+
+For more documentation on Jest, click [here](https://jestjs.io/docs/en/getting-started).
+
+##### Append(Value)
+
+##### Prepend(Value)
   * in your README, write documentation for you data structures
   * your documentation should includes code block useage examples
   * provide instructions for:
