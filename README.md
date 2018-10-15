@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ashley-breunich/lab-linked-lists.svg?branch=master)](https://www.travis-ci.com/ashley-breunich/lab-linked-lists)
+
 ![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure
 ================================================================
 
